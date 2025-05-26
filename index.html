@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ingressos Festa Junina Sérgio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     body {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #f9f2e7 0%, #fcebbd 100%);
       color: #3a2e0f;
@@ -27,12 +26,13 @@
     .event-info {
       text-align: center;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin: 1rem 0 2rem;
       color: #a84b00;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       position: relative;
+      display: inline-block;
     }
     .location-bubble {
       position: absolute;
@@ -57,22 +57,27 @@
       border: 8px solid transparent;
       border-bottom-color: #d97f0a;
     }
-    .card {
+    .card-custom {
+      background: #fff8e1;
       border-radius: 16px;
+      box-shadow: 0 8px 16px rgb(230 180 0 / 0.35);
       border: 3px solid transparent;
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
-    .card:hover {
+    .card-custom:hover {
       transform: translateY(-8px);
-      border-color: #d97f0a !important;
-      box-shadow: 0 14px 30px rgba(217,127,10,0.6);
+      border-color: #d97f0a;
+      box-shadow: 0 14px 30px rgb(217 127 10 / 0.6);
     }
-    .card-title {
+    .card-header-custom {
+      border-bottom: 2px solid #d97f0a;
+    }
+    .card-header-custom h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
       text-transform: uppercase;
       color: #a84b00;
       letter-spacing: 1.5px;
-      font-size: 1.4rem;
-      font-weight: 700;
     }
     .price {
       font-weight: 900;
@@ -83,6 +88,7 @@
       border-radius: 14px;
       box-shadow: inset 0 0 6px #ffcc80;
       white-space: nowrap;
+      text-align: center;
     }
     .subtitle {
       font-style: italic;
@@ -90,24 +96,22 @@
       font-size: 1rem;
       font-weight: 600;
     }
-    .features {
-      padding-left: 1.2rem;
-      margin-bottom: 0;
+    ul.features {
       list-style: none;
-      font-weight: 600;
+      padding: 0;
+      font-size: 1rem;
       color: #5b3e00;
     }
-    .features li {
-      margin-bottom: 1rem;
+    ul.features li {
       display: flex;
       align-items: center;
+      gap: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
     }
-    .features .icon {
-      margin-right: 0.6rem;
+    ul.features li span.icon {
       font-size: 1.5rem;
       color: #d97f0a;
-      width: 32px;
-      text-align: center;
     }
     .normal {
       border-color: #f9a825;
@@ -124,7 +128,7 @@
     }
     footer {
       text-align: center;
-      padding: 1.5rem 0;
+      padding: 1rem 0;
       font-weight: 700;
       font-size: 1.1rem;
       color: #a84b00;
@@ -132,26 +136,25 @@
       border-top: 3px solid #d97f0a;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
   <header>Festa Junina do Sérgio - Ingressos</header>
-  <div class="event-info">
+  <div class="text-center mt-3 event-info">
     Evento em Atibaia — 07/06
     <div class="location-bubble">Rua Letícia Bonini, Atibaia, SP, 12945-240</div>
   </div>
 
-  <div class="container">
+  <div class="container my-5">
     <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card normal h-100 p-3">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <h5 class="card-title mb-0">Ingresso Normal<br><span class="fw-normal">"Sérgio"</span></h5>
+      <div class="col-12 col-md-6">
+        <div class="card-custom p-4 normal">
+          <div class="card-header-custom d-flex justify-content-between align-items-center mb-3">
+            <h2>Ingresso Normal<br><span>"Sérgio"</span></h2>
             <div class="price">R$45,00</div>
           </div>
-          <p class="subtitle">A experiência clássica da Festa Junina mais esperada do ano! 🌽🔥 Ideal pra quem quer curtir de tudo sem frescura.</p>
+          <p class="subtitle mb-3">A experiência clássica da Festa Junina mais esperada do ano! 🌽🔥 Ideal pra quem quer curtir de tudo sem frescura.</p>
           <ul class="features">
             <li><span class="icon">🏡</span>Acesso livre à casa</li>
             <li><span class="icon">😴</span>Possibilidade de dormir no local (colchão é por sua conta, meu guerreiro)</li>
@@ -163,37 +166,36 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card especial h-100 p-3">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <h5 class="card-title mb-0">Ingresso Especial<br><span class="fw-normal">"Chers Season Pass"</span></h5>
+      <div class="col-12 col-md-6">
+        <div class="card-custom p-4 especial">
+          <div class="card-header-custom d-flex justify-content-between align-items-center mb-3">
+            <h2>Ingresso Especial<br><span>"Chers Season Pass"</span></h2>
             <div class="price">R$65,00</div>
           </div>
-          <p class="subtitle">Pra quem quer a vibe do Sérgio com um temperinho a mais 🔥</p>
+          <p class="subtitle mb-3">Pra quem quer a vibe do Sérgio com um temperinho a mais 🔥</p>
           <ul class="features">
             <li><span class="icon">✅</span>Tudo do ingresso "Sérgio"</li>
             <li><span class="icon">💌</span>Sessão "Correio Elegante com o Chers"</li>
             <li><span class="icon">🍹</span>Drink exclusivo na recepção: o "Rala Coração"</li>
             <li><span class="icon">🎟️</span>Fast-pass nas atividades</li>
-            <li><span class="icon">🎶</span>Acesso antecipado à playlist do evento</li>
-            <li><span class="icon">🎤</span>Participação especial em mini performances com o Chers</li>
+            <li><span class="icon">🎶</span>Acesso antecipado à playlist</li>
+            <li><span class="icon">🎤</span>Mini performances interativas com o Chers</li>
           </ul>
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card vip h-100 p-3">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <h5 class="card-title mb-0">Ingresso VIP<br><span class="fw-normal">"Mau Mau Experience"</span></h5>
+      <div class="col-12">
+        <div class="card-custom p-4 vip">
+          <div class="card-header-custom d-flex justify-content-between align-items-center mb-3">
+            <h2>Ingresso VIP<br><span>"Mau Mau Experience"</span></h2>
             <div class="price">R$95,00</div>
           </div>
-          <p class="subtitle">Pra quem quer ser tratado como o reizinho/rainha da roça 👑</p>
+          <p class="subtitle mb-3">Pra quem quer ser tratado como o reizinho/rainha da roça 👑</p>
           <ul class="features">
             <li><span class="icon">✅</span>Tudo do Chers Season Pass</li>
-            <li><span class="icon">📸</span>Foto Polaroid com Mau Mau</li>
-            <li><span class="icon">🍷</span>Degustação de vinhos finos</li>
-            <li><span class="icon">🎬</span>Aftermovie exclusivo do evento</li>
-            <li><span class="icon">🕺</span>Workshop rápido de dança típica com Mau Mau</li>
+            <li><span class="icon">📸</span>Foto Polaroid com o fotógrafo Mau Mau</li>
+            <li><span class="icon">🍷</span>Degustação exclusiva de vinhos finos</li>
+            <li><span class="icon">🎬</span>Aftermovie exclusivo com bastidores</li>
           </ul>
         </div>
       </div>
