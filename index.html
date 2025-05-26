@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ingressos Festa Junina Sérgio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f9f2e7 0%, #fcebbd 100%);
+    color: #3a2e0f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    text-align: center;
+    padding: 3rem 1rem 1rem;
+    background: #d97f0a;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 10px rgba(217,127,10,.5);
+  }
+  .event-info {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0.3rem 0 3rem;
+    color: #a84b00;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+  }
+  .location-bubble {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d97f0a;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(217,127,10,0.6);
+    font-weight: 700;
+  }
+  .location-bubble::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-bottom-color: #d97f0a;
+  }
+  main {
+    max-width: 1024px;
+    margin: 0 auto 6rem;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    align-items: stretch;
+    flex-grow: 1;
+  }
+  .card {
+    background: #fff8e1;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgb(230 180 0 / 0.35);
+    border: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    border-color: #d97f0a;
+    box-shadow: 0 14px 30px rgb(217 127 10 / 0.6);
+  }
+  .card-header {
+    padding: 1.8rem 2rem 1rem;
+    border-bottom: 2px solid #d97f0a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a84b00;
+    letter-spacing: 1.5px;
+    flex-grow: 1;
+  }
+  .price {
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #e65100;
+    background: #fff3e0;
+    padding: 0.6rem 1.2rem;
+    border-radius: 14px;
+    box-shadow: inset 0 0 6px #ffcc80;
+    white-space: nowrap;
+    min-width: 85px;
+    text-align: center;
+  }
+  .subtitle {
+    margin: 0.5rem 2rem 1rem;
+    font-style: italic;
+    color: #7a4a01;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .card-content {
+    padding: 0 2rem 2rem;
+    flex-grow: 1;
+  }
+  ul.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #5b3e00;
+  }
+  ul.features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.8rem;
+    font-weight: 600;
+  }
+  ul.features li span.icon {
+    font-size: 1.7rem;
+    width: 32px;
+    display: inline-flex;
+    justify-content: center;
+    color: #d97f0a;
+  }
+  /* Specific styles for tiers */
+  .normal {
+    border-color: #f9a825;
+    background: linear-gradient(135deg, #fff8dc 0%, #fff3b0 100%);
+  }
+  .especial {
+    border-color: #ef6c00;
+    background: linear-gradient(135deg, #fff4e6 0%, #ffd180 100%);
+  }
+  .vip {
+    border-color: #6d4c41;
+    background: linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%);
+    color: #3e1a4b;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem 0 2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #a84b00;
+    background: #fff8e1;
+    border-top: 3px solid #d97f0a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  @media(max-width: 450px) {
+    .card-header h2 {
+      font-size: 1.2rem;
+    }
+    .price {
+      font-size: 1.4rem;
+      min-width: 65px;
+      padding: 0.3rem 0.8rem;
+    }
+    .subtitle {
+      font-size: 0.9rem;
+      margin: 0.4rem 1rem 1rem;
+    }
+    ul.features li {
+      font-size: 0.9rem;
+      gap: 0.5rem;
+    }
+    ul.features li span.icon {
+      font-size: 1.3rem;
+      width: 24px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>Festa Junina do Sérgio - Ingressos</header>
+<div class="event-info">
+  Evento em Atibaia — 07/06
+  <div class="location-bubble">Rua Letícia Bonini, Atibaia, SP, 12945-240</div>
+</div>
+<main>
+  <section class="card normal">
+    <div class="card-header">
+      <h2>Ingresso Normal<br><span>"Sérgio"</span></h2>
+      <div class="price">R$45,00</div>
+    </div>
+    <p class="subtitle">A experiência clássica da Festa Junina mais esperada do ano! 🌽🔥 Ideal pra quem quer curtir de tudo sem frescura.</p>
+    <div class="card-content">
+      <ul class="features">
+        <li><span class="icon">🏡</span>Acesso livre à casa</li>
+        <li><span class="icon">😴</span>Possibilidade de dormir no local (colchão é por sua conta, meu guerreiro)</li>
+        <li><span class="icon">🍻</span>Open Bar com bebidas típicas</li>
+        <li><span class="icon">🍗</span>Open Food Junino</li>
+        <li><span class="icon">📸</span>Acesso ao álbum compartilhado no Google Fotos após o evento</li>
+        <li><span class="icon">🎯</span>Atividades juninas: pescaria, batata quente com vodka, quadrilha e outras loucuras</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card especial">
+    <div class="card-header">
+      <h2>Ingresso Especial<br><span>"Chers Season Pass"</span></h2>
+      <div class="price">R$65,00</div>
+    </div>
+    <p class="subtitle">Pra quem quer a vibe do Sérgio com um temperinho a mais 🔥</p>
+    <div class="card-content">
+      <ul class="features">
+        <li><span class="icon">✅</span>Tudo do ingresso "Sérgio"</li>
+        <li><span class="icon">💌</span>Sessão "Correio Elegante com o Chers": bilhetes românticos (ou nem tanto) entregues pessoalmente com performance cafona garantida</li>
+        <li><span class="icon">🍹</span>Drink exclusivo na recepção: o "Rala Coração" (receita secreta, só provando)</li>
+        <li><span class="icon">🎟️</span>Fast-pass nas atividades para evitar filas</li>
+        <li><span class="icon">🎶</span>Acesso antecipado à playlist exclusiva do evento</li>
+        <li><span class="icon">🎤</span>Participação especial em mini performances interativas com o Chers</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card vip">
+    <div class="card-header">
+      <h2>Ingresso VIP<br><span>"Mau Mau Experience"</span></h2>
+      <div class="price">R$95,00</div>
+    </div>
+    <p class="subtitle">Pra quem quer ser tratado como o reizinho/rainha da roça 👑</p>
+    <div class="card-content">
+      <ul class="features">
+        <li><span class="icon">✅</span>Tudo do Chers Season Pass</li>
+        <li><span class="icon">📸</span>Foto Polaroid instantânea com o fotógrafo Mau Mau (lembança na hora)</li>
+        <li><span class="icon">🍷</span>Degustação exclusiva de vinhos finos</li>
+        <li><span class="icon">🎬</span>Acesso a um aftermovie exclusivo com bastidores do evento</li>
+        <li><span class="icon">🕺</span>Participação especial em workshop rápido de dança típica com Mau Mau</li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer>Participação especial: Nathan</footer>
+</body>
+</html>
