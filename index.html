@@ -11,6 +11,7 @@
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #f9f2e7 0%, #fcebbd 100%);
       color: #3a2e0f;
+      margin-bottom: 80px;
     }
     header {
       text-align: center;
@@ -32,30 +33,16 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       position: relative;
-      display: inline-block;
     }
     .location-bubble {
-      position: absolute;
-      top: 110%;
-      left: 50%;
-      transform: translateX(-50%);
+      margin-top: 0.5rem;
       background: #d97f0a;
       color: white;
       padding: 0.5rem 1.2rem;
       border-radius: 14px;
       font-size: 0.9rem;
-      white-space: nowrap;
+      display: inline-block;
       box-shadow: 0 3px 8px rgba(217,127,10,0.6);
-      font-weight: 700;
-    }
-    .location-bubble::after {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 8px solid transparent;
-      border-bottom-color: #d97f0a;
     }
     .card-custom {
       background: #fff8e1;
@@ -137,13 +124,54 @@
       text-transform: uppercase;
       letter-spacing: 2px;
     }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 32px;
+      z-index: 100;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    }
+    .whatsapp-float i {
+      line-height: 60px;
+    }
+    .pix-box {
+      background: #fff3e0;
+      color: #e65100;
+      font-weight: 700;
+      padding: 1rem;
+      border-radius: 14px;
+      box-shadow: inset 0 0 6px #ffcc80;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
   </style>
 </head>
 <body>
   <header>Festa Junina do Sérgio - Ingressos</header>
-  <div class="text-center mt-3 event-info">
-    Evento em Atibaia — 07/06
-    <div class="location-bubble">Rua Letícia Bonini, Atibaia, SP, 12945-240</div>
+
+  <div class="container text-center mt-4">
+    <div class="event-info">
+      Evento em Atibaia — 07/06
+      <div class="location-bubble">Rua Letícia Bonini, Atibaia, SP</div>
+    </div>
+    <div class="mt-4">
+      <iframe
+        width="100%"
+        height="300"
+        frameborder="0" style="border:0;border-radius:14px;"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxD-EXAMPLEKEY12345&language=pt&q=Rua+Letícia+Bonini,+Atibaia+SP"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
   <div class="container my-5">
@@ -157,15 +185,14 @@
           <p class="subtitle mb-3">A experiência clássica da Festa Junina mais esperada do ano! 🌽🔥 Ideal pra quem quer curtir de tudo sem frescura.</p>
           <ul class="features">
             <li><span class="icon">🏡</span>Acesso livre à casa</li>
-            <li><span class="icon">😴</span>Possibilidade de dormir no local (colchão é por sua conta, meu guerreiro)</li>
-            <li><span class="icon">🍻</span>Open Bar com bebidas típicas</li>
+            <li><span class="icon">😴</span>Dormir no local</li>
+            <li><span class="icon">🍻</span>Open Bar</li>
             <li><span class="icon">🍗</span>Open Food Junino</li>
-            <li><span class="icon">📸</span>Acesso ao álbum compartilhado no Google Fotos após o evento</li>
-            <li><span class="icon">🎯</span>Atividades juninas: pescaria, batata quente com vodka, quadrilha e outras loucuras</li>
+            <li><span class="icon">📸</span>Álbum no Google Fotos</li>
+            <li><span class="icon">🎯</span>Atividades típicas</li>
           </ul>
         </div>
       </div>
-
       <div class="col-12 col-md-6">
         <div class="card-custom p-4 especial">
           <div class="card-header-custom d-flex justify-content-between align-items-center mb-3">
@@ -174,16 +201,15 @@
           </div>
           <p class="subtitle mb-3">Pra quem quer a vibe do Sérgio com um temperinho a mais 🔥</p>
           <ul class="features">
-            <li><span class="icon">✅</span>Tudo do ingresso "Sérgio"</li>
-            <li><span class="icon">💌</span>Sessão "Correio Elegante com o Chers"</li>
-            <li><span class="icon">🍹</span>Drink exclusivo na recepção: o "Rala Coração"</li>
-            <li><span class="icon">🎟️</span>Fast-pass nas atividades</li>
-            <li><span class="icon">🎶</span>Acesso antecipado à playlist</li>
-            <li><span class="icon">🎤</span>Mini performances interativas com o Chers</li>
+            <li><span class="icon">✅</span>Inclui tudo do "Sérgio"</li>
+            <li><span class="icon">💌</span>Correio Elegante com Chers</li>
+            <li><span class="icon">🍹</span>Drink exclusivo</li>
+            <li><span class="icon">🎟️</span>Fast-pass</li>
+            <li><span class="icon">🎶</span>Playlist antecipada</li>
+            <li><span class="icon">🎤</span>Performances do Chers</li>
           </ul>
         </div>
       </div>
-
       <div class="col-12">
         <div class="card-custom p-4 vip">
           <div class="card-header-custom d-flex justify-content-between align-items-center mb-3">
@@ -192,11 +218,36 @@
           </div>
           <p class="subtitle mb-3">Pra quem quer ser tratado como o reizinho/rainha da roça 👑</p>
           <ul class="features">
-            <li><span class="icon">✅</span>Tudo do Chers Season Pass</li>
-            <li><span class="icon">📸</span>Foto Polaroid com o fotógrafo Mau Mau</li>
-            <li><span class="icon">🍷</span>Degustação exclusiva de vinhos finos</li>
-            <li><span class="icon">🎬</span>Aftermovie exclusivo com bastidores</li>
+            <li><span class="icon">✅</span>Inclui tudo do "Chers"</li>
+            <li><span class="icon">📸</span>Polaroid com Mau Mau</li>
+            <li><span class="icon">🍷</span>Degustação de vinhos</li>
+            <li><span class="icon">🎬</span>Aftermovie exclusivo</li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pix-box mt-5">Chave PIX para pagamento: <strong>ingressos@festajuninasergio.com</strong></div>
+
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            Como funciona o open bar?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Você chega, pega seu copo e se joga nas bebidas típicas sem limite até acabar tudo!</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            Posso levar acompanhante?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Claro! Só garantir outro ingresso e alegria garantida pros dois.</div>
         </div>
       </div>
     </div>
@@ -204,6 +255,11 @@
 
   <footer>Participação especial: Nathan</footer>
 
+  <a href="https://wa.me/55182387132" target="_blank" class="whatsapp-float">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
