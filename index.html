@@ -362,97 +362,103 @@
     </div>
   
   </div>
-  <script>
-    const faqData = [
-      {
-        question: "Como funciona o pagamento?",
-        answer: "Paga antes do evento, via Pix. Se tentar pagar depois, vai virar estatística de caloteiro.",
-        show: true
-      },
-      {
-        question: "Posso dormir?",
-        answer: "Pode. Mas você deve entrar em contado com o promoter Sergio. Leve barraca, travesseiro, cobertor ou a disposição de virar parte da decoração."
-      },
-      {
-        question: "Posso levar acompanhante, amigo ou pet?",
-        answer: "Pode, desde que você conheça a pessoa e ela pague (menos o pet, que entra de boa contanto que não cague no chão)."
-      },
-      {
-        question: "O Chers vai?",
-        answer: "Vai sim. Já confirmou presença."
-      },
-      {
-        question: "Vai ter vinho quente?",
-        answer: "Sim. Está incluso em todas categorias."
-      },
-      {
-        question: "Como confirmo presença?",
-        answer: "Diretamente com um dos embaixadores oficiais do evento. Não entra se não estiver na lista."
-      },
-      {
-        question: "Terá fogueira???",
-        answer: "Claro! A fogueira dos Bellas vai incendiar a noite! 🔥"
-      },
-      {
-        question: "Quais atividades juninas vão ter?",
-        answer: "Dança das Cadeiras, Batata Quente Versão Vodka 🥔, Balão no Pé, Corrida da Paçoca, Pescaria 🎣, Estoura Balão e o principal: Quadrilha!"
-      },
-      {
-        question: "Tem estacionamento?",
-        answer: "Temos 5 vagas, disponíveis por ordem de chegada."
-      },
-      {
-        "question": "Vai ter uma figura do Sergio em tamanho real?",
-        "answer": "Talvez"
-      },
-      {
-        "question": "É Open Bar?",
-        "answer": "Com o valor do ingresso estamos pagando a chácara, decoração e comidas. Compramos também algumas bebidas, mas por bom senso, traga a sua também!"
-      },
-      {
-      "question": "Tem piscina?",
-       "answer": "Tem. Quem não está vestido em traje típico, corre o risco de ser jogado na piscina."
-      },
-       {
-       "question": "Pode levar criança?",
-       "answer": "É um ambiente seguro, mas não. A única exceção é o Baby Chers."
-      },
-      {
-       "question": "O evento é acessível para cadeirantes?",
-       "answer": "Sim."
-      },
-      {
-       "question": "Tem segurança?",
-       "answer": "O Spinella está confirmado no evento."
-      },
-      {
-       "question": "Existem banheiros no local?",
-       "answer": "A casa possui banheiros. Caso todos estejam cheios, você também pode ir no Nardini, que está a cerca de 5 minutos apé. Em caso extremo, pode também fazer suas necessidades no mato."
-      },
-      {
-       "question": "É permitido fumar no evento?",
-       "answer": "Sim, mas você corre o risco de ser jogado na piscina."
-      },
-      {
-       "question": "Precisa de RG pra entrar?",
-       "answer": "Sim, aceitamos também CNH, passaporte e carteirinhas do COC ou Colégio São Paulo. Carteirinhas do Objetivo não são aceitas."
-      }
-    ];
+<script>
+  const faqData = [
+    {
+      question: "Como funciona o pagamento?",
+      answer: "Pague antes do evento, via Pix para o promotor Sergio",
+      show: true,
+      serious: true
+    },
+    {
+      question: "Posso dormir?",
+      answer: "Pode. Mas você deve entrar em contado com o promoter Sergio. Leve barraca, travesseiro, cobertor ou a disposição de virar parte da decoração."
+    },
+    {
+      question: "Posso levar acompanhante, amigo ou pet?",
+      answer: "Pode, desde que você conheça a pessoa e ela pague (menos o pet, que entra de boa contanto que não cague no chão)."
+    },
+    {
+      question: "O Chers vai?",
+      answer: "Vai sim. Já confirmou presença."
+    },
+    {
+      question: "Vai ter vinho quente?",
+      answer: "Sim. Está incluso em todas categorias."
+    },
+    {
+      question: "Como confirmo presença?",
+      answer: "Diretamente com um dos embaixadores oficiais do evento. Não entra se não estiver na lista."
+    },
+    {
+      question: "Terá fogueira???",
+      answer: "Claro! A fogueira dos Bellas vai incendiar a noite! 🔥"
+    },
+    {
+      question: "Quais atividades juninas vão ter?",
+      serious: true,
+      answer: "Dança das Cadeiras, Batata Quente Versão Vodka 🥔, Balão no Pé, Corrida da Paçoca, Pescaria 🎣, Estoura Balão e o principal: Quadrilha!"
+    },
+    {
+      question: "Tem estacionamento?",
+      answer: "Temos 5 vagas, disponíveis por ordem de chegada.",
+      serious: true
+    },
+    {
+      question: "Vai ter uma figura do Sergio em tamanho real?",
+      answer: "Talvez"
+    },
+    {
+      question: "É Open Bar?",
+      answer: "Com o valor do ingresso estamos pagando a chácara, decoração e comidas. Compramos também algumas bebidas, mas por bom senso, traga a sua também!",
+      show: true,
+      serious: true
+    },
+    {
+      question: "Tem piscina?",
+      answer: "Tem. Quem não está vestido em traje típico, corre o risco de ser jogado na piscina."
+    },
+    {
+      question: "Pode levar criança?",
+      answer: "É um ambiente seguro, mas não. A única exceção é o Baby Chers."
+    },
+    {
+      question: "O evento é acessível para cadeirantes?",
+      answer: "Sim."
+    },
+    {
+      question: "Tem segurança?",
+      answer: "O Spinella está confirmado no evento."
+    },
+    {
+      question: "Existem banheiros no local?",
+      answer: "A casa possui banheiros. Caso todos estejam cheios, você também pode ir no Nardini, que está a cerca de 5 minutos apé. Em caso extremo, pode também fazer suas necessidades no mato."
+    },
+    {
+      question: "É permitido fumar no evento?",
+      answer: "Sim, mas você corre o risco de ser jogado na piscina."
+    },
+    {
+      question: "Precisa de RG pra entrar?",
+      answer: "Sim, aceitamos também CNH, passaporte e carteirinhas do COC ou Colégio São Paulo. Carteirinhas do Objetivo não são aceitas."
+    }
+  ];
 
-    const accordionContainer = document.getElementById('faqAccordion');
+  const accordionContainer = document.getElementById('faqAccordion');
 
-    faqData.forEach((item, index) => {
-      const id = `collapse${index + 1}`;
-      const headingId = `heading${index + 1}`;
-      const showClass = item.show ? 'show' : '';
-      const collapsedClass = item.show ? '' : 'collapsed';
-      const ariaExpanded = item.show ? 'true' : 'false';
+  faqData.forEach((item, index) => {
+    const id = `collapse${index + 1}`;
+    const headingId = `heading${index + 1}`;
+    const showClass = item.show ? 'show' : '';
+    const collapsedClass = item.show ? '' : 'collapsed';
+    const ariaExpanded = item.show ? 'true' : 'false';
+    const boldClass = item.serious ? 'fw-bold' : '';
 
-      const accordionItem = document.createElement('div');
-      accordionItem.className = 'accordion-item';
-      accordionItem.innerHTML = `
+    const accordionItem = document.createElement('div');
+    accordionItem.className = 'accordion-item';
+    accordionItem.innerHTML = `
       <h2 class="accordion-header" id="${headingId}">
-        <button class="accordion-button ${collapsedClass}" type="button" data-bs-toggle="collapse" data-bs-target="#${id}" aria-expanded="${ariaExpanded}" aria-controls="${id}">
+        <button class="accordion-button ${collapsedClass} ${boldClass}" type="button" data-bs-toggle="collapse" data-bs-target="#${id}" aria-expanded="${ariaExpanded}" aria-controls="${id}">
           ${item.question}
         </button>
       </h2>
@@ -462,8 +468,10 @@
         </div>
       </div>
     `;
-      accordionContainer.appendChild(accordionItem);
-    });
+    accordionContainer.appendChild(accordionItem);
+  });
+</script>
+
 
 
     const images = [
